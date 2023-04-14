@@ -15,7 +15,8 @@ export class HomePage {
   resposta?: Resposta;
   buscarUsuarios() {
     this.usuariosService.getUsers().subscribe(dados => {
-      return dados as Resposta;
+      console.log(dados);
+      this.resposta = dados as Resposta;
     });
   }
 }
