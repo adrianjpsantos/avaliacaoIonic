@@ -7,9 +7,10 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'lista-usuarios',
     pathMatch: 'full',
-  },  {
+  },
+  {
     path: 'lista-usuarios',
     loadComponent: () => import('./lista-usuarios/lista-usuarios.page').then( m => m.ListaUsuariosPage)
   },
@@ -18,7 +19,7 @@ export const routes: Routes = [
     loadComponent: () => import('./criar-usuario/criar-usuario.page').then( m => m.CriarUsuarioPage)
   },
   {
-    path: 'editar-usuario',
+    path: 'editar-usuario/:id',
     loadComponent: () => import('./editar-usuario/editar-usuario.page').then( m => m.EditarUsuarioPage)
   },
 

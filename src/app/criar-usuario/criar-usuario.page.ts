@@ -31,6 +31,7 @@ export class CriarUsuarioPage implements OnInit {
 
       this.usuariosServices.create(user).subscribe(resposta => {
         alert("Usuario Criado");
+        console.log(resposta);
         this.router.navigate(['/lista-usuarios']);
       })
     }

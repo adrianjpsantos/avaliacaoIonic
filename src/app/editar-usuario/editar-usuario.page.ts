@@ -39,7 +39,8 @@ export class EditarUsuarioPage implements OnInit {
       }
 
       this.usuariosServices.update(user,this.id).subscribe(resposta => {
-        alert("Usuario Criado");
+        alert("Usuario Editado");
+        console.log(resposta);
         this.router.navigate(['/lista-usuarios']);
       })
     }
